@@ -9,6 +9,8 @@ resolvers ++= Seq(
   "wire-releases" at "https://dl.bintray.com/wire-android/releases/"
 )
 
+enablePlugins(JavaAppPackaging)
+
 val circeVersion = "0.8.0"
 val scalaTestVersion = "3.0.4"
 val wireBotVersion = "1.0.4"

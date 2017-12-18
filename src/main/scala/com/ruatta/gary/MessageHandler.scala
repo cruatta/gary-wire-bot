@@ -14,9 +14,8 @@ class MessageHandler(config: Config, env: Environment, repo: ClientRepo)
                       newBot.origin.name,
                       newBot.conversation.id,
                       newBot.conversation.name))
-    config.getAdminHandle match {
-      case Some(adminHandle) => newBot.origin.id == adminHandle
-      case None => true
+    config.adminHandle match {
+      case adminHandle => newBot.origin.id == adminHandle
     }
   }
   

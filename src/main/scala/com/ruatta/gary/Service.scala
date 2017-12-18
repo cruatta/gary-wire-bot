@@ -4,6 +4,13 @@ import com.ruatta.gary.client.CatFactNinjaClient
 import com.wire.bots.sdk.{MessageHandlerBase, Server}
 import io.dropwizard.setup.Environment
 
+object Service {
+
+  def main(args: Array[String]): Unit = {
+    new Service().run(args:_*)
+  }
+
+}
 
 class Service extends Server[Config] {
 
