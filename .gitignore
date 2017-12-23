@@ -52,3 +52,7 @@ fabric.properties
 project/project/
 project/target/
 target/
+
+# Gary
+conf/prod.yml
+conf/keystore.prod.jks

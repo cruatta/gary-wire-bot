@@ -5,7 +5,7 @@ server:
       port: 8080
     - type: https
       port: 4443
-      keyStorePath: keystore.jks
+      keyStorePath: conf/keystore.dev.jks
       keyStorePassword: fake
       certAlias: myservercert
       validateCerts: false
