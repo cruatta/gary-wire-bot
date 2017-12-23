@@ -12,18 +12,19 @@ class CatFactNinjaClient() {
 
   sealed case class CatFactNinjaFact(fact: String, length: Int)
 
+  val URI = "https://catfact.ninja/fact"
+
   def getCatFact: Option[String] = {
     callFactApiEndpoint match {
-      case Some(response: String) => {
+      case Some(response: String) =>
         decodeJson(response).map(_.fact)
-      }
       case None => None
     }
   }
 
   protected def callFactApiEndpoint: Option[String] = {
     try {
-      val response: HttpResponse[String] = Http("https://catfact.ninja/fact").asString
+      val response: HttpResponse[String] = Http(URI).asString
       Some(response.body)
     } catch {
       case e: HttpStatusException =>

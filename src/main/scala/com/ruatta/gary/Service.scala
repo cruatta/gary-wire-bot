@@ -15,8 +15,8 @@ object Service {
 class Service extends Server[Config] {
 
   override protected def createHandler(config: Config, env: Environment): MessageHandlerBase = {
-    val cfnc: CatFactNinjaClient = new CatFactNinjaClient()
-    implicit val mp: MessageProcessor = new MessageProcessor(cfnc)
+    val catFactNinjaClient: CatFactNinjaClient = new CatFactNinjaClient()
+    implicit val messageProcessor: MessageProcessor = new MessageProcessor(catFactNinjaClient)
 
     new MessageHandler(config, env, repo)
   }

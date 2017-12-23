@@ -6,7 +6,7 @@ scalacOptions := Seq("-unchecked", "-deprecation", "-feature", "-encoding", "utf
 
 resolvers ++= Seq(
   "wire-snapshots" at "https://dl.bintray.com/wire-android/snapshots",
-  "wire-releases" at "https://dl.bintray.com/wire-android/releases/"
+  "wire-releases" at "https://dl.bintray.com/wire-android/releases"
 )
 
 enablePlugins(JavaAppPackaging)
