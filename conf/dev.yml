@@ -6,7 +6,7 @@ server:
     - type: https
       port: 4443
       keyStorePath: conf/keystore.dev.jks
-      keyStorePassword: fake
+      keyStorePassword: your_secret
       certAlias: myservercert
       validateCerts: false
       validatePeers: false

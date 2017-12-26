@@ -6,6 +6,10 @@ import com.typesafe.sbt.packager.docker._
 
 dockerBaseImage := "openjdk:8u151-jre-alpine"
 
-dockerExposedPorts := Seq(8443, 8080, 8081)
-
-dockerExposedVolumes := Seq("/opt/docker/conf")
+dockerCommands ++= Seq(
+  Cmd("USER", "root"),
+  ExecCmd("RUN", "apk", "update"),
+  ExecCmd("RUN", "apk", "upgrade"),
+  ExecCmd("RUN", "apk", "add", "bash"),
+  Cmd("USER", "daemon")
+)
