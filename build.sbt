@@ -1,5 +1,7 @@
 name := "gary-wire-bot"
 
+version := "0.2"
+
 organization := "com.ruatta"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-feature", "-encoding", "utf8")
