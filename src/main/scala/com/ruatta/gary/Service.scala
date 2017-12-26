@@ -1,7 +1,8 @@
 package com.ruatta.gary
 
-import com.ruatta.gary.client.CatFactNinjaClient
-import com.wire.bots.sdk.{MessageHandlerBase, Server}
+import com.ruatta.gary.plugins.CatFactPlugin
+import com.ruatta.gary.plugins.catfact.client.CatFactNinjaClient
+import com.wire.bots.sdk.{Logger, MessageHandlerBase, Server}
 import io.dropwizard.setup.Environment
 
 object Service {
@@ -15,8 +16,12 @@ object Service {
 class Service extends Server[Config] {
 
   override protected def createHandler(config: Config, env: Environment): MessageHandlerBase = {
-    val catFactNinjaClient: CatFactNinjaClient = new CatFactNinjaClient()
-    implicit val messageProcessor: MessageProcessor = new MessageProcessor(catFactNinjaClient)
+    val catFactPlugin: CatFactPlugin = new CatFactPlugin(new CatFactNinjaClient)
+    val plugins = Seq(catFactPlugin)
+
+    Logger.info(s"Enabled plugins: ${plugins.map(_.name).mkString(",")}")
+
+    implicit val messageProcessor: MessageProcessor = new MessageProcessor(plugins)
 
     new MessageHandler(config, env, repo)
   }

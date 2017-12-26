@@ -1,4 +1,4 @@
-package com.ruatta.gary.client
+package com.ruatta.gary.plugins.catfact.client
 
 import com.wire.bots.sdk.Logger
 import io.circe._
