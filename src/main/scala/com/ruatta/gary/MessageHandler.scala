@@ -14,9 +14,7 @@ class MessageHandler(config: Config, env: Environment, repo: ClientRepo)
                       newBot.origin.name,
                       newBot.conversation.id,
                       newBot.conversation.name))
-    config.adminHandle match {
-      case adminHandle => newBot.origin.id == adminHandle
-    }
+    config.adminId == newBot.origin.id
   }
   
   override def onText(client: WireClient, msg: TextMessage): Unit = {

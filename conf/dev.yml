@@ -20,4 +20,4 @@ server:
 auth: your_token   # obtained from DevBot when running: show bot <name>
 cryptoDir: ./data
 
-adminHandle: 'Admin'
+adminHandle: e0b9cdae-eab0-11e7-9ecf-f3c037eda9b8

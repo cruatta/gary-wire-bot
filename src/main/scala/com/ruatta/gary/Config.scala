@@ -5,7 +5,7 @@ import com.wire.bots.sdk.Configuration
 
 class Config extends Configuration {
 
-  val adminHandle: String = Configuration.propOrEnv("adminHandle", "GARY_ADMIN_HANDLE")
+  val adminId: String = Configuration.propOrEnv("adminId", "GARY_ADMIN_ID")
 
-  def getAdminHandle: String = adminHandle
+  def getAdminId: String = adminId
 }
