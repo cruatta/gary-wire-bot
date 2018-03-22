@@ -1,6 +1,7 @@
 package com.ruatta.gary
 
-import com.wire.bots.sdk.{ClientRepo, Logger, MessageHandlerBase, WireClient}
+import com.wire.bots.sdk.tools.Logger
+import com.wire.bots.sdk.{ClientRepo, MessageHandlerBase, WireClient}
 import io.dropwizard.setup.Environment
 import com.wire.bots.sdk.models.TextMessage
 import com.wire.bots.sdk.server.model.NewBot

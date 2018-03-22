@@ -1,6 +1,6 @@
 package com.ruatta.gary.plugins.catfact.client
 
-import com.wire.bots.sdk.Logger
+import com.wire.bots.sdk.tools.Logger
 import io.circe._
 import io.circe.generic.auto._
 import io.circe.parser._
