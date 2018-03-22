@@ -2,7 +2,8 @@ package com.ruatta.gary
 
 import com.ruatta.gary.plugins.CatFactPlugin
 import com.ruatta.gary.plugins.catfact.client.CatFactNinjaClient
-import com.wire.bots.sdk.{Logger, MessageHandlerBase, Server}
+import com.wire.bots.sdk.tools.Logger
+import com.wire.bots.sdk.{MessageHandlerBase, Server}
 import io.dropwizard.setup.Environment
 
 object Service {
